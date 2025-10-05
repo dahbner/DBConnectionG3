@@ -2,7 +2,7 @@
 
 namespace DBConnectionG3.Models
 {
-    public class Book
+    public class Guest
     {
         public Guid Id { get; set; }
         public string FullName { get; set; } = string.Empty;
