@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBConnectionG3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fc5711c29e7bc9c853ec95be4be82a5859ee24c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b50ace4d34550c37e3f4112000a73a1a7d7d5fad")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBConnectionG3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBConnectionG3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
