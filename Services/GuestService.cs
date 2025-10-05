@@ -41,6 +41,9 @@ namespace DBConnectionG3.Services
         {
             return await _repo.GetAll();
         }
-
+        public async Task<Guest?> GetById(Guid id)
+        {
+            return await _repo.GetById(id);
+        }
     }
 }
