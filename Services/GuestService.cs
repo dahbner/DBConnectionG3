@@ -29,5 +29,13 @@ namespace DBConnectionG3.Services
             await _repo.Add(guest);
             return guest;
         }
+        public async Task<bool> Delete(Guid id)
+        {
+            var existing = await _repo.GetById(id);
+            if (existing == null) return false;
+
+            await _repo.Delete(id);
+            return true;
+        }
     }
 }
