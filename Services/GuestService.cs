@@ -37,5 +37,10 @@ namespace DBConnectionG3.Services
             await _repo.Delete(id);
             return true;
         }
+        public async Task<IEnumerable<Guest>> GetAll()
+        {
+            return await _repo.GetAll();
+        }
+
     }
 }
