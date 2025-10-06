@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 services:
   db:
@@ -7,13 +8,35 @@ services:
     environment:
       POSTGRES_DB: eventsdb
       POSTGRES_USER: eventsuser
+=======
+services:
+  db:
+    image: postgres:16
+    container_name: guests_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: guestsdb
+      POSTGRES_USER: guestsuser
+>>>>>>> DBConnectionG3/guest
       POSTGRES_PASSWORD: supersecret
     ports:
       - "5432:5432"
     volumes:
+<<<<<<< HEAD
       - events_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U eventsuser -d eventsdb"]
       interval: 5s
       timeout: 3s
       retries: 10
+=======
+      - guests_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U guestsuser -d guestsdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  guests_data:
+>>>>>>> DBConnectionG3/guest

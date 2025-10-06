@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> DBConnectionG3/guest
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
