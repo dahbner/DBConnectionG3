@@ -15,5 +15,11 @@ namespace DBConnectionG3.Controllers
             _service = service;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var guests = await _service.GetAll();
+            return Ok(guests);
+        }
     }
 }
