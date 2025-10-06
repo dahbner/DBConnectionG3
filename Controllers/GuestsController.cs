@@ -30,5 +30,14 @@ namespace DBConnectionG3.Controllers
                 ? NotFound(new { error = "Guest not found", status = 404 })
                 : Ok(guest);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateGuestDto dto)
+        {
+            if (!ModelState.IsValid) return ValidationProblem(ModelState);
+
+            var guest = await _service.Create(dto);
+            return CreatedAtAction(nameof(GetOne), new { id = guest.Id }, guest);
+        }
     }
 }
