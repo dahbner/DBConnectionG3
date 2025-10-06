@@ -1,6 +1,6 @@
 # DBConnectionG3
 TecWeb Group Project – Event Management
-# Lopez Olivares David Hassan, Orozco Veizaga Dabner Eliezer, Rimassa Fernandez Ernesto David
+# Lopez Olivares David Hassan: Event, Orozco Veizaga Dabner Eliezer: Guest
 
 # API with Entities: Books, Guests, and Tickets
 
