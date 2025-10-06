@@ -39,5 +39,14 @@ namespace DBConnectionG3.Controllers
             var guest = await _service.Create(dto);
             return CreatedAtAction(nameof(GetOne), new { id = guest.Id }, guest);
         }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var success = await _service.Delete(id);
+            return success
+                ? NoContent()
+                : NotFound(new { error = "Guest not found", status = 404 });
+        }
     }
 }
