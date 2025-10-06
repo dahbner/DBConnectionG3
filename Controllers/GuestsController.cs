@@ -21,5 +21,14 @@ namespace DBConnectionG3.Controllers
             var guests = await _service.GetAll();
             return Ok(guests);
         }
+
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> GetOne(Guid id)
+        {
+            var guest = await _service.GetById(id);
+            return guest == null
+                ? NotFound(new { error = "Guest not found", status = 404 })
+                : Ok(guest);
+        }
     }
 }
